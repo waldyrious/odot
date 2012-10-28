@@ -14,10 +14,9 @@ and in the user side (because it would eliminate the hassle of creating
 Yet Another Account as well as any security concerns associated with that).
 
 Alas, this is not yet possible with client-side code only,
-so I am doing this as a server-side app
-(you can play with the demo but it won't load or save data).
-Unfortunately you would have to host it in a server
-if you wanted the full functionality.
+so I am doing this as a server-side app.
+There's a demo in the works that can be played with but it won't load or save data;
+you would have to host it in a server if you wanted the full functionality.
 
 But don't worry, you're not missing much, since it's in early states
 and there are plenty of good apps out there that do much more than Odot does now.
