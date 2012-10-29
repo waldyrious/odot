@@ -39,15 +39,23 @@
 					url: 'read-write.php',
 					success: function(json_string){
 						treeData = JSON.parse(json_string);
+						updateDisplay();
 					}
 				});
 			}
+
+			function updateDisplay(){
+				$('#tree-display').html( JSON.stringify(treeData) );
+			}
+
+			$(document).ready(updateDisplay);
 		</script>
 	</head>
 	<body>
 		<ul>
 			<li><a href="#" onclick="loadTree()">load</a></li>
 			<li><a href="#" onclick="saveTree()">save</a></li>
+			<div id="tree-display"></div>
 		</ul>
 	</body>
 </html>
