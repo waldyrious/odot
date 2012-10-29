@@ -17,12 +17,13 @@
 					global: false,
 					type: "POST",
 					cache: false,
-					dataType: "json",
+					dataType: "text",
 					data: ({
 						action: 'write',
 						json_string: JSON.stringify(treeData)
 					}),
-					url: 'read-write.php'
+					url: 'read-write.php',
+					complete: function(xhr){ console.log(xhr.responseText); }
 				});
 			}
 
