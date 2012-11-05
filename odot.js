@@ -1,6 +1,19 @@
-var treeData = {"key1": "val1", 
-				"key2": "val2",
-				"key3": "val3"};
+//when page is ready, start execution by running the function init()
+$(document).ready(init);
+
+var treeData = {};
+
+function init(){
+	$('#tree').tree({dataUrl: 'tree.json'});
+	// bind code to be run after tree is initialized,
+	// since getting the data from the server is done asynchronously
+	$('#tree').bind(
+		'tree.init',
+		function() {
+		    treeData = $('#tree').tree('toJson');
+		}
+	);
+}
 
 function saveTree(){
 	$.ajax({
@@ -16,26 +29,3 @@ function saveTree(){
 		complete: function(xhr){ console.log(xhr.responseText); }
 	});
 }
-
-function loadTree(){
-	$.ajax({
-		global: false,
-		type: "POST",
-		cache: false,
-		dataType: "json",
-		data: ({
-			action: 'read'
-		}),
-		url: 'read-write.php',
-		success: function(json_string){
-			treeData = JSON.parse(json_string);
-			updateDisplay();
-		}
-	});
-}
-
-function updateDisplay(){
-	$('#tree').html( JSON.stringify(treeData) );
-}
-
-$(document).ready(updateDisplay);
