@@ -1,0 +1,27 @@
+[
+  {
+    "name": "node1",
+    "is_open": true,
+    "children": [
+      {
+        "name": "child1",
+        "is_open": true,
+		"another": "wot"
+      },
+      {
+        "name": "child2",
+        "is_open": true
+      }
+    ]
+  },
+  {
+    "name": "node2",
+    "is_open": true,
+    "children": [
+      {
+        "name": "child3",
+        "is_open": true
+      }
+    ]
+  }
+]
