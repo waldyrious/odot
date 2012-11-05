@@ -35,7 +35,7 @@ function loadTree(){
 }
 
 function updateDisplay(){
-	$('#tree-display').html( JSON.stringify(treeData) );
+	$('#tree').html( JSON.stringify(treeData) );
 }
 
 $(document).ready(updateDisplay);
