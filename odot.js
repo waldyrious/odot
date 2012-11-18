@@ -1,10 +1,11 @@
 //when page is ready, start execution by running the function init()
 $(document).ready(init);
 
+var treeFilename = 'tree.json';
 var treeData = {};
 
 function init(){
-	$('#tree').tree({dataUrl: 'tree.json'});
+	$('#tree').tree({dataUrl: treeFilename});
 	// bind code to be run after tree is initialized,
 	// since getting the data from the server is done asynchronously
 	$('#tree').bind(
@@ -22,8 +23,8 @@ function saveTree(){
 		cache: false,
 		dataType: "text",
 		data: ({
-			action: 'write',
-			json_string: JSON.stringify(treeData)
+			filename: treeFilename,
+			json_string: treeData
 		}),
 		url: 'read-write.php',
 		complete: function(xhr){ console.log(xhr.responseText); }
