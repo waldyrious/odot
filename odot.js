@@ -30,3 +30,13 @@ function saveTree(){
 		complete: function(xhr){ console.log(xhr.responseText); }
 	});
 }
+
+$(document).keydown(function() {
+	//event.preventDefault();
+	switch(event.which) {
+		case 37: console.log("left"); break;
+		case 38: console.log("up"); break;
+		case 39: console.log("right"); break;
+		case 40: console.log("down"); break;
+	}
+});
