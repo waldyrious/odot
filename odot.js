@@ -9,9 +9,8 @@ $(function(){
 		onPostInit: function(isReloading, isError) {
 		    // In lazy mode, this will be called *after* the initAjax request returned.
 		    // 'this' is the current tree
-		    // isReloading is set, if status wss read from existing cookies
+		    // isReloading is set, if status was read from existing cookies
 		    // isError is set, if Ajax failed
-		    // Fire an onActivate() event for the currently active node
 		    treeData = this.toDict().children;
 			treeData.shift();
 			$("#debug").text(JSON.stringify(treeData));
