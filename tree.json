@@ -1,26 +1,22 @@
 [
   {
-    "name": "node1",
-    "is_open": true,
+    "title": "node1",
+	"isFolder": true,
     "children": [
       {
-        "name": "child1",
-        "is_open": true,
-		"another": "wot"
+        "title": "child1"
       },
       {
-        "name": "child2",
-        "is_open": true
+        "title": "child2"
       }
     ]
   },
   {
-    "name": "node2",
-    "is_open": true,
+    "title": "node2",
+	"isFolder": true,
     "children": [
       {
-        "name": "child3",
-        "is_open": true
+        "title": "child3"
       }
     ]
   }

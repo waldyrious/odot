@@ -1,20 +1,23 @@
-//when page is ready, start execution by running the function init()
-$(document).ready(init);
-
 var treeFilename = 'tree.json';
 var treeData = {};
 
-function init(){
-	$('#tree').tree({dataUrl: treeFilename});
-	// bind code to be run after tree is initialized,
-	// since getting the data from the server is done asynchronously
-	$('#tree').bind(
-		'tree.init',
-		function() {
-		    treeData = $('#tree').tree('toJson');
+// The tree is initialized in the onload event of the html document.
+// In jQuery this is usually done by passing a function to $(...)
+$(function(){
+	$("#tree").dynatree({
+		initAjax: {url: treeFilename},
+		onPostInit: function(isReloading, isError) {
+		    // In lazy mode, this will be called *after* the initAjax request returned.
+		    // 'this' is the current tree
+		    // isReloading is set, if status wss read from existing cookies
+		    // isError is set, if Ajax failed
+		    // Fire an onActivate() event for the currently active node
+		    treeData = this.toDict().children;
+			treeData.shift();
+			$("#debug").text(JSON.stringify(treeData));
 		}
-	);
-}
+	});
+});
 
 function saveTree(){
 	$.ajax({
@@ -24,19 +27,9 @@ function saveTree(){
 		dataType: "text",
 		data: ({
 			filename: treeFilename,
-			json_string: treeData
+			json_string: JSON.stringify(treeData)
 		}),
-		url: 'read-write.php',
+		url: 'write.php',
 		complete: function(xhr){ console.log(xhr.responseText); }
 	});
 }
-
-$(document).keydown(function() {
-	//event.preventDefault();
-	switch(event.which) {
-		case 37: console.log("left"); break;
-		case 38: console.log("up"); break;
-		case 39: console.log("right"); break;
-		case 40: console.log("down"); break;
-	}
-});
