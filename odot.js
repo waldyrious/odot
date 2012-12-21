@@ -11,7 +11,12 @@ $(function(){
 		    // 'this' is the current tree
 		    // isReloading is set, if status was read from existing cookies
 		    // isError is set, if Ajax failed
+
+			// toDict().children is needed because of dynatree's bug 379:
+			// https://code.google.com/p/dynatree/issues/detail?id=379
 		    treeData = this.toDict().children;
+			// shift() is needed because of dynatree's bug 378:
+			// https://code.google.com/p/dynatree/issues/detail?id=378
 			treeData.shift();
 			$("#debug").text(JSON.stringify(treeData));
 		}
