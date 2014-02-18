@@ -1,4 +1,4 @@
-[![Stories in Ready](https://badge.waffle.io/waldir/odot.png?label=ready)](https://waffle.io/waldir/odot)  
+[![Next Up](https://badge.waffle.io/waldir/odot.png?label=ready)](https://waffle.io/waldir/odot)  
 Odot
 ====
 
@@ -22,6 +22,7 @@ if you want your data saved persistently.
 
 But don't worry, you're not missing much, since it's in early states
 and there are plenty of good apps out there that do much more than Odot does now.
-[Checkvist](http://checkvist.com) and [Workflowy](http://workflowy.com) are highly recommended.
+[Checkvist](http://checkvist.com), [HollyApp](https://hollyapp.com) and [Workflowy](http://workflowy.com)
+are highly recommended.
 Meanwhile, check Odot's [roadmap](https://github.com/waldir/odot/issues/milestones)
 for an outline of upcoming development and planned features.
