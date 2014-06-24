@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Prioritized task list</title>
+	<style>
+		body {
+			font-family: sans-serif;
+		}
+		fieldset {
+			display: inline-block;
+			border: none;
+			margin: 0;
+			padding: 5px 10px;
+		}
+		table { 
+			border-collapse: collapse;
+			padding: 0;
+			margin: 5px 10px;
+		}
+		td, th {
+			border:1px solid black;
+			padding: 0 0.5em;
+		}
+		th {
+			background-color: PowderBlue;
+		}
+		td.priority.min {
+			background-color: #fff;
+		}
+		td.priority.low {
+			background-color: #ccc;
+		}
+		td.priority.mid {
+			background-color: #999;
+		}
+		td.priority.high {
+			background-color: #666;
+			color: white;
+		}
+		td.priority.max {
+			background-color: #333;
+			color: white;
+		}
+		td.score {
+			color: gray;
+		}
+		*[title] {
+			cursor: help;
+		}
+	</style>
+</head>
+<body>
+	<h2>Input new task:</h2>
+	<form>
+		<fieldset id="task">
+			<legend>task:</legend>
+			<input type="text" size="40"/>
+		</fieldset>
+		<fieldset id="5">
+			<legend title="When is the deadline?">urgency:</legend>
+			<select><!--this should be a calendar widget-->
+				<option value="5">today</option>
+				<option value="4">within a week</option>
+				<option value="3">within a month</option>
+				<option value="2">within a year</option>
+				<option value="1" selected="selected">whenever</option>
+			</select>
+		</fieldset>
+		<fieldset id="4">
+			<legend title="How obligated am I do to this?">commitment:</legend>
+			<select>
+				<option value="5">paid work</option>
+				<option value="4">formal assignment</option>
+				<option value="3">informal assignment</option>
+				<option value="2">favor</option>
+				<option value="1" selected="selected">self-assigned</option>
+			</select>
+		</fieldset>
+		<fieldset id="3">
+			<legend title="What Maslow need satisfaction does this task enable in the people it affects?">impact:</legend>
+			<select>
+				<option value="5">physical/survival</option>
+				<option value="4">security/stability</option>
+				<option value="3">socialization</option>
+				<option value="2">achievement</option>
+				<option value="1" selected="selected">leisure</option>
+			</select>
+		</fieldset>
+		<fieldset id="2">
+			<legend title="How long does this task take to complete?">effort:</legend>
+			<select>
+				<option value="5" selected="selected">less than an hour</option>
+				<option value="4">less than a day</option>
+				<option value="3">less than a week</option>
+				<option value="2">less than a month</option>
+				<option value="1">less than a year</option>
+			</select>
+		</fieldset>
+		<fieldset id="1">
+			<legend title="How often should this task be performed?">frequency:</legend>
+			<select>
+				<option value="5" selected="selected">once</option>
+				<option value="4">yearly</option>
+				<option value="3">monthly</option>
+				<option value="2">weekly</option>
+				<option value="1">daily</option>
+			</select>
+		</fieldset>
+		<button id="add">add</button>
+	</form>
+	
+	<h2>Task list</h2>
+	<table>
+		<tr>
+			<th title="Priority">Pri</th>
+			<th>Task</th>
+			<th title="Urgency">Urg</th>
+			<th title="Commitment">Cmt</th>
+			<th title="Impact">Imp</th>
+			<th title="Effort">Eff</th>
+			<th title="Frequency">Frq</th>
+		</tr>
+		<tr>
+			<td class="priority max" title="5*5 + 4*3 + 3*5 + 2*5 + 1*3 = 65. Max = 75. 65/75 = 0.87">87 %</td>
+			<td class="task-name">Buy groceries</td>
+			<td class="urgency score" title="today">★★★★★</td>
+			<td class="commitment score" title="informal assignment">★★★☆☆</td>
+			<td class="impact score" title="physical/survival">★★★★★</td>
+			<td class="effort score" title="less than an hour">★★★★★</td>
+			<td class="frequency score" title="monthly">★★★☆☆</td>
+		</tr>
+		<tr>
+			<td class="priority max" title="5*5 + 4*4 + 3*4 + 2*4 + 1*5 = 66. Max = 75. 66/75 = 0.88">88 %</td>
+			<td class="task-name">Submit the paper draft</td>
+			<td class="urgency score" title="today">★★★★★</td>
+			<td class="commitment score" title="formal assignment">★★★★☆</td>
+			<td class="impact score" title="security/stability">★★★★☆</td>
+			<td class="effort score" title="less than a day">★★★★☆</td>
+			<td class="frequency score" title="once">★★★★★</td>
+		</tr>
+		<tr>
+			<td class="priority high" title="5*5 + 4*1 + 3*2 + 2*5 + 1*1 = 46. Max = 75. 46/75 = 0.61">61 %</td>
+			<td class="task-name">Exercise</td>
+			<td class="urgency score" title="today">★★★★★</td>
+			<td class="commitment score" title="self-assigned">★☆☆☆☆</td>
+			<td class="impact score" title="achievement">★★☆☆☆</td>
+			<td class="effort score" title="less than an hour">★★★★★</td>
+			<td class="frequency score" title="daily">★☆☆☆☆</td>
+		</tr>
+		<tr>
+			<td class="priority high" title="5*3 + 4*2 + 3*4 + 2*4 + 1*4 = 47. Max = 75. 47/75 = 0.63">63 %</td>
+			<td class="task-name">Send Jane a postcard for her birthday</td>
+			<td class="urgency score" title="within a month">★★★☆☆</td>
+			<td class="commitment score" title="self-assigned">★★☆☆☆</td>
+			<td class="impact score" title="socialization">★★★★☆</td>
+			<td class="effort score" title="less than an hour">★★★★☆</td>
+			<td class="frequency score" title="yearly">★★★★☆</td>
+		</tr>
+		<tr>
+			<td class="priority high" title="5*3 + 4*5 + 3*4 + 2*3 + 1*3 = 56. Max = 75. 65/75 = 0.75">75 %</td>
+			<td class="task-name">Lorem ipsum</td>
+			<td class="urgency score" title="within a month">★★★☆☆</td>
+			<td class="commitment score" title="paid work">★★★★★</td>
+			<td class="impact score" title="security/stability">★★★★☆</td>
+			<td class="effort score" title="less than a week">★★★☆☆</td>
+			<td class="frequency score" title="monthly">★★★☆☆</td>
+		</tr>
+	</table>
+</body>
