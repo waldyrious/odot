@@ -1,5 +1,4 @@
-[![Next Up](https://badge.waffle.io/waldir/odot.png?label=ready)](https://waffle.io/waldir/odot)
-
+[![Next Up](https://badge.waffle.io/waldir/odot.png?label=ready)](https://waffle.io/waldir/odot)  
 Odot
 ====
 
@@ -11,7 +10,7 @@ To this, it aims to incorporate:
   This provides better task organization
   and addresses the need to split "iceberg" tasks into manageable units.
   See for example [Checkvist](http://checkvist.com)
-  and [Workflowy](http://workflowy.com)
+  and [Workflowy](http://workflowy.com).
 - an auto-updating model for items without a well-defined deadline,
   like [TeuxDeux](http://teuxdeux.com/).
 - a multi-component, [objective priority scale](http://waldir.github.io/odot/priority.xhtml)
@@ -25,7 +24,8 @@ To this, it aims to incorporate:
 - ability to tag and filter tasks in real-time with a powerful search engine
   (think gmail, github, duckduckgo). This is just for extra convenience.
   But some tags could even be configured to automatically fill
-  some of the priority components (e.g. #work --> commitment:paid work)
+  some of the priority components (e.g. `#work` --> `commitment:paid work`).
+  Perhaps also a context (`@home`, etc.) for location-based task selection.
 - A simple text-based interface (see [todo.txt](http://todotxt.com))
   for current tasks. SQLite for archived (completed / deleted) tasks,
   so it works perfectly offline.
