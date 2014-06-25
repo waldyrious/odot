@@ -1,8 +1,7 @@
-[![Next Up](https://badge.waffle.io/waldir/odot.png?label=ready)](https://waffle.io/waldir/odot)  
 Odot
 ====
 
-A simple but powerful task manager, meant to address
+Odot is a simple but powerful task manager, meant to address
 [the problems](http://blogs.hbr.org/2012/01/to-do-lists-dont-work/)
 of [simple to-do lists](https://zapier.com/blog/to-do-list-broken/).
 To this, it aims to incorporate:
@@ -54,6 +53,7 @@ Odot is still mostly in the planning phase, with very little actually implemente
 Feel free to contribute ideas, fixes, improvements, and (constructive) criticism.
 Check Odot's [roadmap](https://github.com/waldir/odot/issues/milestones)
 for an outline of upcoming development and planned features.
+See also the [waffle.io board](https://waffle.io/waldir/odot).
 
 Meanwhile, there are plenty of good apps out there that follow some of the principles
 outlined for Odot. [Checkvist](http://checkvist.com), [HollyApp](https://hollyapp.com)
