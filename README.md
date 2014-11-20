@@ -51,8 +51,9 @@ if you want your data saved persistently.
 # Alternatives
 Odot is still mostly in the planning phase, with very little actually implemented.
 Feel free to contribute ideas, fixes, improvements, and (constructive) criticism.
-Check Odot's [roadmap](https://github.com/waldyrious/odot/issues/milestones)
+Check Odot's [roadmap](https://github.com/waldyrious/odot/milestones)
 for an outline of upcoming development and planned features.
+(Click on the (more) links to read each milestone's detailed description).
 See also the [waffle.io board](https://waffle.io/waldyrious/odot).
 
 Meanwhile, there are plenty of good apps out there that follow some of the principles
