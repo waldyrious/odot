@@ -4,7 +4,7 @@ Odot
 Odot is a simple but powerful task manager, meant to address
 [the problems](http://blogs.hbr.org/2012/01/to-do-lists-dont-work/)
 of [simple to-do lists](https://zapier.com/blog/to-do-list-broken/).
-To this, it aims to incorporate:w
+To this, it aims to incorporate:
 - a hierarchical tree of tasks, to allow task subdivision.
   This provides better task organization
   and addresses the need to split "iceberg" tasks into manageable units.
@@ -51,10 +51,9 @@ if you want your data saved persistently.
 # Alternatives
 Odot is still mostly in the planning phase, with very little actually implemented.
 Feel free to contribute ideas, fixes, improvements, and (constructive) criticism.
-Check Odot's [roadmap](https://github.com/waldyrious/odot/milestones)
+Check Odot's [roadmap](https://github.com/waldyrious/odot/wiki/roadmap)
 for an outline of upcoming development and planned features.
 (Click on the (more) links to read each milestone's detailed description).
-See also the [waffle.io board](https://waffle.io/waldyrious/odot).
 
 Meanwhile, there are plenty of good apps out there that follow some of the principles
 outlined for Odot. [Checkvist](http://checkvist.com), [HollyApp](https://hollyapp.com)
